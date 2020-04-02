@@ -4,33 +4,24 @@ import React, { Component } from 'react'
     
     constructor(props) {
         super(props)
-    
         this.state = {
              count : 0
         }
      
     }
-    increaseCount = () => {
-        this.setState({
-            count : this.state.count +1
-        })
-    }
+    
     decreaseCount = () => {
-        if(this.state.count >= 0){
-            this.setState({
-            count: --this.state.count 
-            })     
-        }
-        
-        
+        this.setState(state => ({
+            count : state.count--
+        }))
     }
     
-    render() {
+    
+render() {
         return (
             <div>
                 count - {this.state.count} <br/>  
-                <button onClick={ this.increaseCount }>+</button>
-                <button style={{marginLeft : '5px'}} onClick={this.decreaseCount}>-</button>
+                <button onClick={this.decreaseCount}>-</button>
             </div>
         )
     }

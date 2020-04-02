@@ -1,10 +1,11 @@
 import React from 'react';
-function Greet(props){
+const Greet = props => {
+    const { name,children} = props
     console.log(props)
     return (
     <div>
-        <h1> hello  {props.name} </h1>
-        {props.children}
+        <h1> hello  {name} </h1>
+        {children}
     </div>
     );
 }

@@ -1,14 +1,12 @@
 import React, {Component} from 'react';
 
 class Welcome extends Component{
-    constructor(props){
-        super(props);
-    }
-    render(){
+   render(){
+       const {name,children} = this.props;
         return (
             <div>
-                <h1>Hello {this.props.name}</h1>
-                {this.props.children}
+                <h1>Hello {name}</h1>
+                {   children}
             </div>
         );
     }   

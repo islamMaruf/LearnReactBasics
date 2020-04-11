@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import ChildComponent from './ChildComponent'
 
 class ParentComponent extends Component {
@@ -6,19 +6,19 @@ class ParentComponent extends Component {
         super(props)
 
         this.state = {
-            parentName : 'parent'
+            parentName: 'parent'
         }
     }
 
-    greetParent = (naem) => {
-        console.log(naem);
+    greetParent = (name) => {
+        console.log(name);
         console.log(this.state.parentName)
     }
 
     render() {
         return (
             <div>
-                <ChildComponent greetHandler={this.greetParent}></ChildComponent>
+                <ChildComponent greetHandler={this.greetParent}/>
             </div>
         )
     }

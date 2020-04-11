@@ -14,12 +14,14 @@ import UserGreetings from './components/UserGreetings';
 import ListRendering from './components/ListRendering';
 import StyleComponent from "./components/StyleComponent";
 import FromComponent from "./components/FromComponent";
+import LifeCycleA from "./components/LifeCycleA";
 
 class App extends Component {
     render() {
         return (
             <div className="App">
-                <FromComponent/>
+                <LifeCycleA/>
+                {/*<FromComponent/>*/}
                 {/*<StyleComponent primary={true}>*/}
                 {/*    <h1 className={styleMe.success}>Hello world</h1>*/}
                 {/*</StyleComponent>*/}

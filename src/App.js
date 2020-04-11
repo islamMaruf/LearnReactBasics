@@ -19,7 +19,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <FromComponent></FromComponent>
+                <FromComponent/>
                 {/*<StyleComponent primary={true}>*/}
                 {/*    <h1 className={styleMe.success}>Hello world</h1>*/}
                 {/*</StyleComponent>*/}

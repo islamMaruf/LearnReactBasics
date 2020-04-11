@@ -6,7 +6,8 @@ class FromComponent extends Component {
         this.state = {
             username: '',
             comments : '',
-            topic : ''
+            topic : '',
+            agree :false
         };
         this.handelTextArea =  this.handelTextArea.bind(this);
     }
@@ -21,7 +22,7 @@ class FromComponent extends Component {
         this.setState({topic : event.target.value})
     }
     handelCheckbox = event => {
-        console.log(event.target.value)
+       this.setState({ agree : event.target.checked })
     }
     handelFrom = event => {
         event.preventDefault();
@@ -56,7 +57,7 @@ class FromComponent extends Component {
                     </div>
                     <div>
                         <label> Are you agree</label>
-                        <input type="checkbox" name="agree"  onChange={this.handelCheckbox} />Yes
+                        <input type="checkbox" name="agree"  onClick={this.handelCheckbox} />Yes
                     </div>
                     <input type="submit" value="Submit"/>
                 </form>

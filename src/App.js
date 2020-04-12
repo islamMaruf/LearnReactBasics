@@ -23,12 +23,14 @@ import ParentOfPureAndRegularComp from "./components/ParentOfPureAndRegularComp"
 import RefsDemo from "./components/RefsDemo";
 import FocusInput from "./components/FocusInput";
 import FRParent from "./components/FRParent";
+import Portal from "./components/Portal";
 
 class App extends Component {
     render() {
         return (
             <div className="App">
-                <FRParent/>
+                <Portal/>
+                {/*<FRParent/>*/}
                 {/*<FocusInput/>*/}
                 {/*<RefsDemo/>*/}
                {/*<ParentOfPureAndRegularComp/>*/}

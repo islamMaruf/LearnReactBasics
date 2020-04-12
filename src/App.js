@@ -16,12 +16,16 @@ import StyleComponent from "./components/StyleComponent";
 import FromComponent from "./components/FromComponent";
 import LifeCycleA from "./components/LifeCycleA";
 import LifeCycleB from "./components/LifeCycleB";
+import FragmentDemo from "./components/FragmentDemo";
+import Table from "./components/Table";
 
 class App extends Component {
     render() {
         return (
             <div className="App">
-                <LifeCycleB/>
+                {/*<FragmentDemo/>*/}
+                {/*<Table/>*/}
+                {/*<LifeCycleB/>*/}
                 {/*<LifeCycleA/>*/}
                 {/*<FromComponent/>*/}
                 {/*<StyleComponent primary={true}>*/}

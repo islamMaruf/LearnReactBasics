@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PureComp from "./PureComp";
 import RegularComp from "./RegularComp";
+import MemoComp from "./MemoComp";
 
 class ParentOfPureAndRegularComp extends Component {
     constructor(props) {
@@ -13,7 +14,7 @@ class ParentOfPureAndRegularComp extends Component {
     componentDidMount() {
         setTimeout(() => {
             this.setState({
-                name: 'marufa'
+                name: 'new maruf'
             })
         }, 2000)
     }
@@ -22,9 +23,11 @@ class ParentOfPureAndRegularComp extends Component {
         console.log('************************* parent component render *******************');
         return (
             <div>
-                <p>Parent component</p>
-                <PureComp name={this.state.name}/>
-                <RegularComp name={this.state.name}/>
+                <p>Memo component </p>
+                <MemoComp name={this.state.name}/>
+                {/*<p>Parent component</p>*/}
+                {/*<PureComp name={this.state.name}/>*/}
+                {/*<RegularComp name={this.state.name}/>*/}
             </div>
         );
     }

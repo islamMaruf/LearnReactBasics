@@ -15,12 +15,14 @@ import ListRendering from './components/ListRendering';
 import StyleComponent from "./components/StyleComponent";
 import FromComponent from "./components/FromComponent";
 import LifeCycleA from "./components/LifeCycleA";
+import LifeCycleB from "./components/LifeCycleB";
 
 class App extends Component {
     render() {
         return (
             <div className="App">
-                <LifeCycleA/>
+                <LifeCycleB/>
+                {/*<LifeCycleA/>*/}
                 {/*<FromComponent/>*/}
                 {/*<StyleComponent primary={true}>*/}
                 {/*    <h1 className={styleMe.success}>Hello world</h1>*/}

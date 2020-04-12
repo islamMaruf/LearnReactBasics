@@ -24,16 +24,28 @@ import RefsDemo from "./components/RefsDemo";
 import FocusInput from "./components/FocusInput";
 import FRParent from "./components/FRParent";
 import Portal from "./components/Portal";
+import Hero from "./components/Hero";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 class App extends Component {
+
     render() {
         return (
             <div className="App">
-                <Portal/>
+                <ErrorBoundary>
+                    <Hero name="joker"></Hero>
+                </ErrorBoundary>
+                <ErrorBoundary>
+
+                    <Hero name="maruf"></Hero>
+                </ErrorBoundary>
+
+
+                {/*<Portal/>*/}
                 {/*<FRParent/>*/}
                 {/*<FocusInput/>*/}
                 {/*<RefsDemo/>*/}
-               {/*<ParentOfPureAndRegularComp/>*/}
+                {/*<ParentOfPureAndRegularComp/>*/}
                 {/*<FragmentDemo/>*/}
                 {/*<Table/>*/}
                 {/*<LifeCycleB/>*/}

@@ -7,6 +7,7 @@ class LifeCycleB extends Component {
         this.state = {
             name: 'Maruf islam'
         }
+        this.changeState = this.changeState.bind(this);
         console.log('lifeCycleB constructors method ')
     }
     static getDerivedStateFromProps(props,state){
@@ -28,13 +29,18 @@ class LifeCycleB extends Component {
         console.log('lifeCycleB componentDidUpdate method ');
     }
 
-
+    changeState = () => {
+        this.setState({
+            name : 'faruk'
+        })
+    }
 
     render() {
         console.log('lifeCycleB render method ');
         return (
             <div>
                 <p>Life cycle b render</p>
+                <button onClick={this.changeState}>click    </button>
                 <ChildOfLifeCycleB/>
             </div>
         );

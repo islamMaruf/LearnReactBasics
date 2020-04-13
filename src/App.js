@@ -26,19 +26,23 @@ import FRParent from "./components/FRParent";
 import Portal from "./components/Portal";
 import Hero from "./components/Hero";
 import ErrorBoundary from "./components/ErrorBoundary";
+import ClickCounter from "./components/ClickCounter";
+import HoverCounter from "./components/HoverCounter";
 
 class App extends Component {
 
     render() {
         return (
             <div className="App">
-                <ErrorBoundary>
-                    <Hero name="joker"></Hero>
-                </ErrorBoundary>
-                <ErrorBoundary>
+                <ClickCounter/>
+                <HoverCounter/>
+                {/*<ErrorBoundary>*/}
+                {/*    <Hero name="joker"></Hero>*/}
+                {/*</ErrorBoundary>*/}
+                {/*<ErrorBoundary>*/}
 
-                    <Hero name="maruf"></Hero>
-                </ErrorBoundary>
+                {/*    <Hero name="maruf"></Hero>*/}
+                {/*</ErrorBoundary>*/}
 
 
                 {/*<Portal/>*/}

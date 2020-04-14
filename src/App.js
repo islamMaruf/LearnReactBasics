@@ -28,14 +28,21 @@ import Hero from "./components/Hero";
 import ErrorBoundary from "./components/ErrorBoundary";
 import ClickCounter from "./components/ClickCounter";
 import HoverCounter from "./components/HoverCounter";
+import ClickCounterTwo from "./components/ClickCounterTwo";
+import HoverCounterTwo from "./components/HoverCounterTwo";
+import User from "./components/User";
+import RenderPropCounter from "./components/RenderPropCounter";
 
 class App extends Component {
 
     render() {
         return (
             <div className="App">
-                <ClickCounter name="maruf"/>
-                <HoverCounter/>
+                <RenderPropCounter render={(count,incrementCount) => <ClickCounterTwo count={count} incrementCount={incrementCount}/> }/>
+                <RenderPropCounter render={(count,incrementCount) => <HoverCounterTwo count={count} incrementCount={incrementCount}/> }/>
+                {/*<User render={(isLoggedIn) => isLoggedIn ? 'maruf' : 'guest ' } />*/}
+                {/*<ClickCounter name="maruf"/>*/}
+                {/*<HoverCounter/>*/}
                 {/*<ErrorBoundary>*/}
                 {/*    <Hero name="joker"></Hero>*/}
                 {/*</ErrorBoundary>*/}

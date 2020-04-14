@@ -34,7 +34,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <ClickCounter/>
+                <ClickCounter name="maruf"/>
                 <HoverCounter/>
                 {/*<ErrorBoundary>*/}
                 {/*    <Hero name="joker"></Hero>*/}

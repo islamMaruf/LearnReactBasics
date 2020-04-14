@@ -6,7 +6,8 @@ class PostList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            posts: []
+            posts: [],
+            errorMessage: ''
         }
     }
 
@@ -15,18 +16,25 @@ class PostList extends Component {
         axios.get(url)
             .then(result => {
                 this.setState({posts: result.data})
-            })
+            }).catch(err => {
+            this.setState({errorMessage: err.getMessage()})
+        })
 
 
     }
 
     render() {
-        let {posts} = this.state;
+        let {posts,errorMessage} = this.state;
         return (
             <div>
                 <h1>List of post</h1>
                 {
-                    posts.map(post => <Post key={post.id} post={post}/>)
+                    posts.length ?
+                        posts.map(post => <Post key={post.id} post={post}/>)
+                        : null
+                }
+                {
+                    errorMessage ? <div> {errorMessage} </div> : null
                 }
             </div>
         );

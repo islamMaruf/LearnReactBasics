@@ -35,13 +35,15 @@ import RenderPropCounter from "./components/RenderPropCounter";
 import ComponentC from "./components/ComponentC";
 import {UserProvider} from "./components/UserContext"
 import PostList from "./components/PostList";
+import PostFrom from "./components/PostFrom";
 
 class App extends Component {
 
     render() {
         return (
             <div className="App">
-                <PostList/>
+                {/*<PostList/>*/}
+                <PostFrom/>
                 {/*<UserProvider value="maruf">*/}
                 {/*    <ComponentC/>*/}
                 {/*</UserProvider>*/}

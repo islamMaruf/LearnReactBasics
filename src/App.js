@@ -34,17 +34,17 @@ import User from "./components/User";
 import RenderPropCounter from "./components/RenderPropCounter";
 import ComponentC from "./components/ComponentC";
 import {UserProvider} from "./components/UserContext"
+import PostList from "./components/PostList";
 
 class App extends Component {
 
     render() {
         return (
             <div className="App">
-                <UserProvider value="maruf">
-                    <ComponentC/>
-                </UserProvider>
-
-
+                <PostList/>
+                {/*<UserProvider value="maruf">*/}
+                {/*    <ComponentC/>*/}
+                {/*</UserProvider>*/}
                 {/*<RenderPropCounter render={(count,incrementCount) => <ClickCounterTwo count={count} incrementCount={incrementCount}/> }/>*/}
                 {/*<RenderPropCounter render={(count,incrementCount) => <HoverCounterTwo count={count} incrementCount={incrementCount}/> }/>*/}
                 {/*/!*<User render={(isLoggedIn) => isLoggedIn ? 'maruf' : 'guest ' } />*!/*/}

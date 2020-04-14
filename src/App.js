@@ -32,15 +32,22 @@ import ClickCounterTwo from "./components/ClickCounterTwo";
 import HoverCounterTwo from "./components/HoverCounterTwo";
 import User from "./components/User";
 import RenderPropCounter from "./components/RenderPropCounter";
+import ComponentC from "./components/ComponentC";
+import {UserProvider} from "./components/UserContext"
 
 class App extends Component {
 
     render() {
         return (
             <div className="App">
-                <RenderPropCounter render={(count,incrementCount) => <ClickCounterTwo count={count} incrementCount={incrementCount}/> }/>
-                <RenderPropCounter render={(count,incrementCount) => <HoverCounterTwo count={count} incrementCount={incrementCount}/> }/>
-                {/*<User render={(isLoggedIn) => isLoggedIn ? 'maruf' : 'guest ' } />*/}
+                <UserProvider value="maruf">
+                    <ComponentC/>
+                </UserProvider>
+
+
+                {/*<RenderPropCounter render={(count,incrementCount) => <ClickCounterTwo count={count} incrementCount={incrementCount}/> }/>*/}
+                {/*<RenderPropCounter render={(count,incrementCount) => <HoverCounterTwo count={count} incrementCount={incrementCount}/> }/>*/}
+                {/*/!*<User render={(isLoggedIn) => isLoggedIn ? 'maruf' : 'guest ' } />*!/*/}
                 {/*<ClickCounter name="maruf"/>*/}
                 {/*<HoverCounter/>*/}
                 {/*<ErrorBoundary>*/}
